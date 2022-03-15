@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+/*--------------------*/
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+}
+
+/* ============================================================================================================================================= */
+.services {
+    text-align: center;
+    background-color: #17c2a4;
+    max-width: 1440px;
+}
+
+.container-services {
+    height: 747px;
+    padding-top: 119px;
+    margin: 0 auto;
+}
+
+.services-header {
+    margin-bottom: 83px;
+}
+.services-title {
+    margin: 0 0 21px 0;
+    font-size: 40px;
+    line-height: 29px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
+.services-img {
+    opacity: 0.14;
+    margin-bottom: 23px;
+}
+
+.services-text {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    height: 45px;
+    width: 603px;
+    margin: 0 auto;
+}
+.services-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 175px;
+}
+.services-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 250px;
+}
+.img__1 {
+    max-width: 159px;
+    margin: 0 auto;
+}
+
+.column-title {
+    font-size: 24px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 27px;
+    margin-top: 60px;
+}
+.column-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    padding: 0 20px;
+}
