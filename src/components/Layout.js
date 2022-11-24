@@ -1,5 +1,7 @@
 import { NavLink, Link, Outlet } from 'react-router-dom';
 import './Layout.css';
+import { footer } from '../data/Data';
+
 
 const Layout = () => {
     return (
@@ -17,13 +19,8 @@ const Layout = () => {
             <Outlet />
 
             <footer>
-                <Link to="/">Facebook</Link>
-                <Link to="/">Twitter</Link>
-                <Link to="/">Google+</Link>
-                <Link to="/">LinkedIn</Link>
-                <Link to="/">Behance</Link>
-                <Link to="/">Dribbble</Link>
-                <Link to="/">GitHub</Link>
+                {footer.map((lin, index) =>
+                    <Link to={lin.http} key={index}>{lin.link}</Link>)}
             </footer>
         </>
     )
