@@ -1,12 +1,16 @@
-import { NavLink, Link, Outlet } from 'react-router-dom';
+import { NavLink, Link, Outlet, useNavigate } from 'react-router-dom';
 import './Layout.css';
 import { footer } from '../data/Data';
+import { useAuth } from '../hook/useAuth';
 
 
 const Layout = () => {
+    const { user, signout } = useAuth();
+    const navigate = useNavigate();
+
     return (
         <>
-            <header>
+            <header className='navbar'>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/about">About us</NavLink>
                 <NavLink to="/services">Services</NavLink>
@@ -14,6 +18,10 @@ const Layout = () => {
                 <NavLink to="/portfolio">Portfolio</NavLink>
                 <NavLink to="/team">Team</NavLink>
                 <NavLink to="/contacts">Contacts</NavLink>
+                {user
+                    ? <button className='btn-signout' onClick={() => signout(() => navigate('/', { replace: true }))}>Sign out</button>
+                    : <NavLink className='btn-signin' style={{ color: "green " }} to="/login">Sign in</NavLink>
+                }
             </header >
 
             <Outlet />

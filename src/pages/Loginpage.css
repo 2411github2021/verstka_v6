@@ -79,38 +79,48 @@ h6 {
 }
 
 /* ============================================================================================================================================= */
-.header {
+.container-login {
     text-align: center;
-    background-color: #87509c;
+    background-color: gray;
     max-width: 1440px;
-}
-.header__row {
-    height: 596px;
-    padding-top: 57px;
-    margin: 0 auto;
-}
-.header__logo {
-    text-align: left;
-    margin-bottom: 145px;
-    margin-left: 211px;
-}
-.header-text {
-    margin-bottom: 54px;
-    font-size: 42.2px;
-    font-weight: 700;
-    color: #f7f3ea;
+    height: 435px;
+    padding-top: 100px;
+    }
+
+.login-title {
+    font-size: 30px;
+    margin-bottom: 1rem;
 }
 
-.header-button {
-    top: 381px;
-    left: 574px;
-    height: 70px;
-    width: 293px;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: #ffffff;
+.label-login {
+    display: inline-block;
+    align-items: center;
+    border: 1px solid #000;
     border-radius: 5px;
-    background-color: #eb7d4b;
+    height: 130px;
+    width: 200px;
+    background-color: darkgray;
+}
+
+.input {
+    font-size: 15px;
+    text-align: left;
+    margin: 0.5rem 0 0.5rem 2rem;
+}
+
+.form-login {
+    border: 1px solid blue;
+    border-radius: 4px;
+}
+
+.form-login::placeholder {
+    color: fuchsia;
+    font-size: 15px;
+}
+
+.btn-login {
+    margin-top: 0.5rem;
+    background: green;
+    width: 50px;
+    border-radius: 4px;
 }

@@ -123,7 +123,7 @@ input::placeholder {
     color: #ffffff;
     padding-left: 20px;
 }
-input {
+.contacts-name, .contacts-mail {
     width: 428px;
     height: 56px;
     background-color: #273a71;
@@ -145,7 +145,7 @@ textarea {
     border-radius: 5px;
     margin-bottom: 59px;
 }
-button {
+.contacts-button {
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
