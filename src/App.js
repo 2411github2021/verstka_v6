@@ -15,8 +15,20 @@ import { Layout } from './components/Layout';
 import './App.css';
 import RequireAuth from './hoc/RequireAuth';
 import { AuthProvider } from './hoc/AuthProvider';
+import { useEffect, useState } from 'react';
 
 function App() {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch('https://638f611e4ddca317d7f6f498.mockapi.io/data_site')
+            .then((res) => {
+                return res.json();
+            })
+            .then((arr) => {
+                setItems(arr);
+            });
+    }, []);
 
     return (
         <AuthProvider >
@@ -24,11 +36,11 @@ function App() {
                 <Route path='/' element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route element={<RequireAuth />}>
-                        <Route path='services' element={<Services />} />
-                        <Route path='team' element={<Team />} />
-                        <Route path='skills' element={<Skills />} />
-                        <Route path='portfolio' element={<Portfolio />} />
-                        <Route path='about' element={<About />} />
+                        <Route path='services' element={<Services items={items[0]} />} />
+                        <Route path='team' element={<Team items={items[2]} />} />
+                        <Route path='skills' element={<Skills items={items[1]} />} />
+                        <Route path='portfolio' element={<Portfolio items={items[4]} />} />
+                        <Route path='about' element={<About items={items[3]} />} />
                         <Route path='contacts' element={<Contacts />} />
                     </Route>
                     <Route path='login' element={<LoginPage />} />

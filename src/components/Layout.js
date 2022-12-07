@@ -1,8 +1,7 @@
 import { NavLink, Link, Outlet, useNavigate } from 'react-router-dom';
-import './Layout.css';
 import { footer } from '../data/Data';
 import { useAuth } from '../hook/useAuth';
-
+import './Layout.css';
 
 const Layout = () => {
     const { user, signout } = useAuth();
